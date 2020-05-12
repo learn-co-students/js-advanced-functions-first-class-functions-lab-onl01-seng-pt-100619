@@ -15,18 +15,14 @@ const selectingDrivers = [
         returnLastTwoDrivers
     ] // array
 
-function createFareMultiplier(integer){
-    return function(value ){return value * integer };
+function createFareMultiplier(multiplier){
+    return function(fare){return fare * multiplier };
 } // higher order 
 // multiplier
 
-function fareDoubler(fare){
-    return fare *2;
-}
+const fareDoubler = createFareMultiplier(2)
 
-function fareTripler(fare){
-    return fare *3;
-}
+const fareTripler = createFareMultiplier(3)
 
 const selectDifferentDrivers = function(array, functionName ){
     
@@ -34,6 +30,9 @@ const selectDifferentDrivers = function(array, functionName ){
     // use the function name as an argument/variable so the function returned can be changed
 }
 
-
+// we are passing functions and dynamic or active information into variables
+// also manipulating functions to be called inside other functions
+// chain actions or functions to call in inner scopes and in an abstracted way
+// the line/ difference bewteen variables and functions is almost eliminated
 
 
